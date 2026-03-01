@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Aim Sensitivity Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles" id="particles-js"></div>
+    <div class="container">
+        <h1>Pro Aim Sensitivity Generator</h1>
+        <div class="card">
+            <h2>Device Selection</h2>
+            <div class="form-group">
+                <label for="brand">Brand:</label>
+                <select id="brand">
+                    <option value="Samsung">Samsung</option>
+                    <option value="Xiaomi">Xiaomi</option>
+                    <option value="Realme">Realme</option>
+                    <option value="Vivo">Vivo</option>
+                    <option value="OnePlus">OnePlus</option>
+                    <option value="Motorola">Motorola</option>
+                    <option value="iPhone">iPhone</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ram">RAM (GB):</label>
+                <select id="ram">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="processor">Processor:</label>
+                <select id="processor">
+                    <option value="Snapdragon">Snapdragon</option>
+                    <option value="MediaTek">MediaTek</option>
+                    <option value="Exynos">Exynos</option>
+                    <option value="Apple Chip">Apple Chip</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="graphics">Graphics:</label>
+                <select id="graphics">
+                    <option value="Smooth">Smooth</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Ultra">Ultra</option>
+                </select>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Play Style Selection</h2>
+            <div class="form-group">
+                <label for="playstyle">Play Style:</label>
+                <select id="playstyle">
+                    <option value="Aggressive">Aggressive (Rush player)</option>
+                    <option value="Sniper">Sniper player</option>
+                    <option value="One-tap">One-tap headshot player</option>
+                    <option value="Spray">Spray control player</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fingers">Finger Claw:</label>
+                <select id="fingers">
+                    <option value="2">2 Finger</option>
+                    <option value="3">3 Finger</option>
+                    <option value="4">4 Finger</option>
+                </select>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Fire Button Size</h2>
+            <div class="form-group">
+                <label for="fireButtonSize">Fire Button Size: <span id="fireButtonValue">50</span>%</label>
+                <input type="range" id="fireButtonSize" min="10" max="100" value="50">
+            </div>
+        </div>
+        <button id="generateBtn" class="glow-button">Generate Sensitivity</button>
+        <div class="card" id="resultCard" style="display: none;">
+            <h2>Your Sensitivity Settings</h2>
+            <div class="sensitivity-result">
+                <div class="sensitivity-item">
+                    <span>General:</span>
+                    <span id="general">0</span>
+                </div>
+                <div class="sensitivity-item">
+                    <span>Red Dot:</span>
+                    <span id="redDot">0</span>
+                </div>
+                <div class="sensitivity-item">
+                    <span>2x Scope:</span>
+                    <span id="twoX">0</span>
+                </div>
+                <div class="sensitivity-item">
+                    <span>4x Scope:</span>
+                    <span id="fourX">0</span>
+                </div>
+                <div class="sensitivity-item">
+                    <span>Sniper Scope:</span>
+                    <span id="sniper">0</span>
+                </div>
+                <div class="sensitivity-item">
+                    <span>Free Look:</span>
+                    <span id="freeLook">0</span>
+                </div>
+            </div>
+            <button id="copyBtn" class="glow-button">Copy Sensitivity</button>
+            <button id="saveBtn" class="glow-button">Save Settings</button>
+            <button id="resetBtn" class="glow-button">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
